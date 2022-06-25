@@ -1,0 +1,11 @@
+[Unit]
+Description=Webhook Service
+after=network.target
+
+[Service]
+Type=simple
+ExecStart=/PATH-TO/Webhook-for-alertmanager/run.sh
+Restart=on-abort
+
+[Install]
+WantedBy=default.target
